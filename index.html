@@ -108,6 +108,20 @@ footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;
   font-size:12.5px;color:var(--ink3);line-height:1.7}
 footer a{color:var(--ink2)}
 [hidden]{display:none!important}
+
+.dhead{display:flex;gap:13px;align-items:flex-start;padding-bottom:7px;
+  border-bottom:1px solid var(--line)}
+.dcapa{flex:0 0 auto;display:block;width:168px;height:112px;border-radius:10px;
+  overflow:hidden;border:1px solid var(--line);background:var(--card);
+  transition:opacity .18s ease}
+.dcapa:hover{opacity:.86}
+.dcapa img{width:100%;height:100%;object-fit:cover;display:block}
+.dtxt{flex:1;min-width:0}
+.dhead .dh{border-bottom:none;padding-bottom:0}
+.dcred{margin:6px 0 0;font-size:11px;color:var(--ink3);letter-spacing:.02em}
+.dcred a{color:var(--ink3);text-decoration:none;border-bottom:1px dotted var(--line)}
+.dcred a:hover{color:var(--ink)}
+@media(max-width:520px){.dcapa{width:112px;height:76px}}
 </style>
 </head>
 <body>
@@ -119,6 +133,7 @@ footer a{color:var(--ink2)}
  <b>índice para programar viagens</b>: cada destino junta a <b>vista que me fez parar o dedo</b>
  e a <b>casa onde eu ficaria</b> — separado entre o que cabe num feriado e o que pede viagem grande.</p>
  <p class="nota"><b>Como ler:</b> cada card linka o post original, com o crédito de quem postou.
+ A foto que abre cada destino também vem de um desses posts, creditada e clicável.
  Nada aqui é publi meu — é o que eu salvei porque quis.</p>
  <div class="stats">
   <div class="stat"><b>54</b><span>destinos</span></div>
@@ -147,8 +162,14 @@ footer a{color:var(--ink2)}
 
  <h2 class="esch" id="g-feriado">Pra um feriado<small>saindo de São Paulo — carro ou voo curto</small></h2>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Dc_helohH8R/" target="_blank" rel="noopener"><img src="img/serra-da-canastra-mg.webp" alt="Foto de @viagemverificada — Serra da Canastra · MG" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Serra da Canastra · MG <small>Brasil · 2 lugares · 1 casa</small></h3>
 <p class="cnota">Vista de dia, casarão à noite: dá um feriado inteiro na mesma região.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Dc_helohH8R/" target="_blank" rel="noopener">@viagemverificada</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/Dc_helohH8R/" target="_blank" rel="noopener">Caminho do Céu</a></div>
@@ -171,8 +192,14 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Dc9ry9BRON-/" target="_blank" rel="noopener"><img src="img/ilhabela-sp.webp" alt="Foto de @bnbguests — Ilhabela · SP" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Ilhabela · SP <small>Brasil · 4 casas</small></h3>
 <p class="cnota">Onde comer na ilha (Enfim Ostras e cia.) está na aba fila.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Dc9ry9BRON-/" target="_blank" rel="noopener">@bnbguests</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.instagram.com/p/Dc9ry9BRON-/" target="_blank" rel="noopener">Casa Barco</a></div>
@@ -201,8 +228,14 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Dc_-BVSSVt-/" target="_blank" rel="noopener"><img src="img/campos-do-jordao-sp.webp" alt="Foto de @casaspacamposdojordao — Campos do Jordão · SP" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Campos do Jordão · SP <small>Brasil · 2 casas</small></h3>
 <p class="cnota">A lista de onde comer em Campos (da Gelly) está na aba fila.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Dc_-BVSSVt-/" target="_blank" rel="noopener">@casaspacamposdojordao</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.instagram.com/p/Dc_-BVSSVt-/" target="_blank" rel="noopener">SPA nas montanhas</a></div>
@@ -219,8 +252,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DbdfvDcDlFR/" target="_blank" rel="noopener"><img src="img/litoral-norte-ubatuba-e-sao-sebastiao.webp" alt="Foto de @dicasedestinosbr — Litoral norte · Ubatuba e São Sebastião" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Litoral norte · Ubatuba e São Sebastião <small>Brasil · 2 casas</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DbdfvDcDlFR/" target="_blank" rel="noopener">@dicasedestinosbr</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.instagram.com/p/DbdfvDcDlFR/" target="_blank" rel="noopener">Casa pé na areia</a></div>
@@ -237,8 +275,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DWRexO9DJJS/" target="_blank" rel="noopener"><img src="img/costa-verde-paraty-e-mangaratiba.webp" alt="Foto de @maisgoias — Costa Verde · Paraty e Mangaratiba" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Costa Verde · Paraty e Mangaratiba <small>Brasil · 1 lugar · 3 casas</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DWRexO9DJJS/" target="_blank" rel="noopener">@maisgoias</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DWRexO9DJJS/" target="_blank" rel="noopener">Cachoeira à beira-mar de Paraty</a></div>
@@ -267,8 +310,14 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DcgwL3hAyih/" target="_blank" rel="noopener"><img src="img/serra-da-mantiqueira.webp" alt="Foto de @matakaa___goncalves — Serra da Mantiqueira" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Serra da Mantiqueira <small>Brasil · 8 casas</small></h3>
 <p class="cnota">Oito casas na mesma serra: a escolha aqui é menos de destino e mais de qual vale se quer ver do deck.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DcgwL3hAyih/" target="_blank" rel="noopener">@matakaa___goncalves</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.instagram.com/p/DcgwL3hAyih/" target="_blank" rel="noopener">Tiny house Matakaa</a></div>
@@ -321,8 +370,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Dc8i8prBhE7/" target="_blank" rel="noopener"><img src="img/serrinha-do-alambari-rj.webp" alt="Foto de @oquesaberantesdeir — Serrinha do Alambari · RJ" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Serrinha do Alambari · RJ <small>Brasil · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Dc8i8prBhE7/" target="_blank" rel="noopener">@oquesaberantesdeir</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/Dc8i8prBhE7/" target="_blank" rel="noopener">Poço do Céu</a></div>
@@ -333,8 +387,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DXCH-__jJsF/" target="_blank" rel="noopener"><img src="img/piracaia-sp.webp" alt="Foto de @lucianolbasso.arq — Piracaia · SP" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Piracaia · SP <small>Brasil · 1 casa</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DXCH-__jJsF/" target="_blank" rel="noopener">@lucianolbasso.arq</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.instagram.com/p/DXCH-__jJsF/" target="_blank" rel="noopener">Casa Han&#x27;ei</a></div>
@@ -345,8 +404,14 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.holmy.com.br/hospedagem/cabana-monet-no-alto-da-galicia/" target="_blank" rel="noopener"><img src="img/bom-jesus-dos-perdoes-sp.webp" alt="Foto de holmy.com.br — Bom Jesus dos Perdões · SP" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Bom Jesus dos Perdões · SP <small>Brasil · 1 casa</small></h3>
 <p class="cnota">Perto o bastante para ser decisão de sexta-feira.</p>
+<p class="dcred">foto de <a href="https://www.holmy.com.br/hospedagem/cabana-monet-no-alto-da-galicia/" target="_blank" rel="noopener">holmy.com.br</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.holmy.com.br/hospedagem/cabana-monet-no-alto-da-galicia/" target="_blank" rel="noopener">Cabana Monet no Alto da Galícia</a></div>
@@ -357,8 +422,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdCzCZgGCD2/" target="_blank" rel="noopener"><img src="img/ibitipoca-mg.webp" alt="Foto de @ibitiprojeto — Ibitipoca · MG" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Ibitipoca · MG <small>Brasil · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdCzCZgGCD2/" target="_blank" rel="noopener">@ibitiprojeto</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DdCzCZgGCD2/" target="_blank" rel="noopener">Portal do Spinoza — Ibiti</a></div>
@@ -369,8 +439,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DbB-DskBTK3/" target="_blank" rel="noopener"><img src="img/bananal-sp.webp" alt="Foto de @trilhandocomchiquinho — Bananal · SP" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Bananal · SP <small>Brasil · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DbB-DskBTK3/" target="_blank" rel="noopener">@trilhandocomchiquinho</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DbB-DskBTK3/" target="_blank" rel="noopener">Cachoeira do Bracuí</a></div>
@@ -381,8 +456,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Dc07o1Nu4bS/" target="_blank" rel="noopener"><img src="img/sao-paulo-sp.webp" alt="Foto de @mavinho_acoroni — São Paulo · SP" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">São Paulo · SP <small>Brasil · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Dc07o1Nu4bS/" target="_blank" rel="noopener">@mavinho_acoroni</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/Dc07o1Nu4bS/" target="_blank" rel="noopener">Mirante do Copan</a></div>
@@ -393,8 +473,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DaGi2iGMeYp/" target="_blank" rel="noopener"><img src="img/santa-catarina.webp" alt="Foto de @ricardoalessandre — Santa Catarina" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Santa Catarina <small>Brasil · 3 lugares · 2 casas</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DaGi2iGMeYp/" target="_blank" rel="noopener">@ricardoalessandre</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DaGi2iGMeYp/" target="_blank" rel="noopener">Cânion do Funil</a></div>
@@ -429,8 +514,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DbQ8MH0CJ06/" target="_blank" rel="noopener"><img src="img/foz-do-iguacu-pr.webp" alt="Foto de @iguassusecretfalls — Foz do Iguaçu · PR" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Foz do Iguaçu · PR <small>Brasil · 1 lugar · 1 casa</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DbQ8MH0CJ06/" target="_blank" rel="noopener">@iguassusecretfalls</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DbQ8MH0CJ06/" target="_blank" rel="noopener">Iguassu Secret Falls</a></div>
@@ -447,8 +537,14 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdPgUCUymR-/" target="_blank" rel="noopener"><img src="img/caminhos-do-mar-sbc.webp" alt="Foto de @faca.as.malas — Caminhos do Mar · SBC" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Caminhos do Mar · SBC <small>Brasil · 1 lugar</small></h3>
 <p class="cnota">Bate-volta clássico de SP que quase ninguém faz.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdPgUCUymR-/" target="_blank" rel="noopener">@faca.as.malas</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DdPgUCUymR-/" target="_blank" rel="noopener">Café 1922 + Parque Caminhos do Mar</a></div>
@@ -459,8 +555,14 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Dbyz2BsJwu7/" target="_blank" rel="noopener"><img src="img/pedra-azul-es.webp" alt="Foto de @espelhodapedra — Pedra Azul · ES" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Pedra Azul · ES <small>Brasil · 1 casa</small></h3>
 <p class="cnota">Onde comer no ES (Pirá, Garden Bistrô) está na aba fila.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Dbyz2BsJwu7/" target="_blank" rel="noopener">@espelhodapedra</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.instagram.com/p/Dbyz2BsJwu7/" target="_blank" rel="noopener">Pousada Espelho da Pedra</a></div>
@@ -471,8 +573,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DWC9YM4AJ1D/" target="_blank" rel="noopener"><img src="img/vinicola-em-minas.webp" alt="Foto de @hotelevinicoladavo — Vinícola em Minas" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Vinícola em Minas <small>Brasil · 1 casa</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DWC9YM4AJ1D/" target="_blank" rel="noopener">@hotelevinicoladavo</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.instagram.com/p/DWC9YM4AJ1D/" target="_blank" rel="noopener">Hotel e vinícola Davo</a></div>
@@ -484,8 +591,14 @@ footer a{color:var(--ink2)}
 </section>
  <h2 class="esch" id="g-longe">Viagem grande<small>pede planejamento — Brasil longe e mundo afora</small></h2>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DajSqBqNcNO/" target="_blank" rel="noopener"><img src="img/lencois-maranhenses-ma.webp" alt="Foto de @humbertobaddini — Lençóis Maranhenses · MA" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Lençóis Maranhenses · MA <small>Brasil · 3 lugares · 1 casa</small></h3>
 <p class="cnota">Melhor época: fim das chuvas (jun–set), com as lagoas cheias.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DajSqBqNcNO/" target="_blank" rel="noopener">@humbertobaddini</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DajSqBqNcNO/" target="_blank" rel="noopener">Lençóis Maranhenses</a></div>
@@ -514,8 +627,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DYlVdQrDZbI/" target="_blank" rel="noopener"><img src="img/bahia.webp" alt="Foto de @danielafilomeno — Bahia" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Bahia <small>Brasil · 2 lugares · 2 casas</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DYlVdQrDZbI/" target="_blank" rel="noopener">@danielafilomeno</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DYlVdQrDZbI/" target="_blank" rel="noopener">Cachoeira do Buracão</a></div>
@@ -544,8 +662,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdXJnfWA8jB/" target="_blank" rel="noopener"><img src="img/canions-do-xingo-al-se.webp" alt="Foto de @nordestamos — Cânions do Xingó · AL/SE" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Cânions do Xingó · AL/SE <small>Brasil · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdXJnfWA8jB/" target="_blank" rel="noopener">@nordestamos</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DdXJnfWA8jB/" target="_blank" rel="noopener">Cânions do Xingó</a></div>
@@ -556,8 +679,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DcCtgNkID_u/" target="_blank" rel="noopener"><img src="img/piaui.webp" alt="Foto de @gutoestradeiro — Piauí" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Piauí <small>Brasil · 2 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DcCtgNkID_u/" target="_blank" rel="noopener">@gutoestradeiro</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DcCtgNkID_u/" target="_blank" rel="noopener">Cânions do Viana</a></div>
@@ -574,8 +702,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DcDkyDpRTsu/" target="_blank" rel="noopener"><img src="img/agreste-pernambucano.webp" alt="Foto de @pedrafuradapeoficial — Agreste pernambucano" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Agreste pernambucano <small>Brasil · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DcDkyDpRTsu/" target="_blank" rel="noopener">@pedrafuradapeoficial</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DcDkyDpRTsu/" target="_blank" rel="noopener">Pedra Furada</a></div>
@@ -586,8 +719,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DZX24segApO/" target="_blank" rel="noopener"><img src="img/litoral-de-alagoas.webp" alt="Foto de @maresdomiai — Litoral de Alagoas" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Litoral de Alagoas <small>Brasil · 1 lugar · 1 casa</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DZX24segApO/" target="_blank" rel="noopener">@maresdomiai</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://www.instagram.com/p/DZX24segApO/" target="_blank" rel="noopener">Dunas Douradas</a></div>
@@ -604,8 +742,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="br">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdL8EB3us0X/" target="_blank" rel="noopener"><img src="img/tatajuba-ceara.webp" alt="Foto de @cabanachictatajuba — Tatajuba · Ceará" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Tatajuba · Ceará <small>Brasil · 1 casa</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdL8EB3us0X/" target="_blank" rel="noopener">@cabanachictatajuba</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.instagram.com/p/DdL8EB3us0X/" target="_blank" rel="noopener">Cabana Chic — A Pesqueira</a></div>
@@ -616,8 +759,14 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="asia">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Dc9DIVxsB6J/" target="_blank" rel="noopener"><img src="img/quirguistao.webp" alt="Foto de @viagens.fora.do.comum — Quirguistão" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Quirguistão <small>Ásia e Oriente · 4 lugares · 1 casa</small></h3>
 <p class="cnota">Cinco salvos — é disparado o destino fora do óbvio que mais aparece nos teus salvos.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Dc9DIVxsB6J/" target="_blank" rel="noopener">@viagens.fora.do.comum</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr2">
 <div class="cn"><a href="https://www.instagram.com/p/Dc9DIVxsB6J/" target="_blank" rel="noopener">O lago</a></div>
@@ -652,8 +801,14 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="asia">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DcqkT9liIzA/" target="_blank" rel="noopener"><img src="img/cazaquistao.webp" alt="Foto de @g_cooper — Cazaquistão" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Cazaquistão <small>Ásia e Oriente · 1 lugar</small></h3>
 <p class="cnota">Combina com o Quirguistão numa expedição só pela Ásia Central.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DcqkT9liIzA/" target="_blank" rel="noopener">@g_cooper</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr2">
 <div class="cn"><a href="https://www.instagram.com/p/DcqkT9liIzA/" target="_blank" rel="noopener">As paisagens alienígenas</a></div>
@@ -664,8 +819,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="ame">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdPCUlvNBzI/" target="_blank" rel="noopener"><img src="img/groenlandia.webp" alt="Foto de @viajandocomamor — Groenlândia" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Groenlândia <small>Américas · 2 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdPCUlvNBzI/" target="_blank" rel="noopener">@viajandocomamor</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr4">
 <div class="cn"><a href="https://www.instagram.com/p/DdPCUlvNBzI/" target="_blank" rel="noopener">8 dias entre icebergs</a></div>
@@ -682,8 +842,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="ame">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Da6CGzyM5P4/" target="_blank" rel="noopener"><img src="img/patagonia-chile-argentina.webp" alt="Foto de @patagoniahero — Patagônia · Chile &amp; Argentina" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Patagônia · Chile &amp; Argentina <small>Américas · 5 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Da6CGzyM5P4/" target="_blank" rel="noopener">@patagoniahero</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr4">
 <div class="cn"><a href="https://www.instagram.com/p/Da6CGzyM5P4/" target="_blank" rel="noopener">Torres del Paine + El Chaltén</a></div>
@@ -718,8 +883,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="ame">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdJvJe1Ik8l/" target="_blank" rel="noopener"><img src="img/jujuy-argentina.webp" alt="Foto de @brunastartt — Jujuy · Argentina" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Jujuy · Argentina <small>Américas · 2 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdJvJe1Ik8l/" target="_blank" rel="noopener">@brunastartt</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr4">
 <div class="cn"><a href="https://www.instagram.com/p/DdJvJe1Ik8l/" target="_blank" rel="noopener">Salinas Grandes</a></div>
@@ -736,8 +906,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="ame">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Da_ZaRORV2I/" target="_blank" rel="noopener"><img src="img/andes.webp" alt="Foto de @lebetel — Andes" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Andes <small>Américas · 5 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Da_ZaRORV2I/" target="_blank" rel="noopener">@lebetel</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr4">
 <div class="cn"><a href="https://www.instagram.com/p/Da_ZaRORV2I/" target="_blank" rel="noopener">Trekking Huayhuash</a></div>
@@ -772,8 +947,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="ame">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DbZygDIO_4b/" target="_blank" rel="noopener"><img src="img/america-do-norte.webp" alt="Foto de @angelaliggs — América do Norte" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">América do Norte <small>Américas · 3 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DbZygDIO_4b/" target="_blank" rel="noopener">@angelaliggs</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr4">
 <div class="cn"><a href="https://www.instagram.com/p/DbZygDIO_4b/" target="_blank" rel="noopener">Little Beehive — Lake Louise</a></div>
@@ -796,8 +976,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="ame">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Db9SBa-gZ-f/" target="_blank" rel="noopener"><img src="img/whistler-canada.webp" alt="Foto de @gowhistler — Whistler · Canadá" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Whistler · Canadá <small>Américas · 2 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Db9SBa-gZ-f/" target="_blank" rel="noopener">@gowhistler</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr4">
 <div class="cn"><a href="https://www.instagram.com/p/Db9SBa-gZ-f/" target="_blank" rel="noopener">O verão de Whistler</a></div>
@@ -814,8 +999,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="ame">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdCflG_TLhz/" target="_blank" rel="noopener"><img src="img/nicaragua.webp" alt="Foto de @_nadaantraveller — Nicarágua" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Nicarágua <small>Américas · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdCflG_TLhz/" target="_blank" rel="noopener">@_nadaantraveller</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr4">
 <div class="cn"><a href="https://www.instagram.com/p/DdCflG_TLhz/" target="_blank" rel="noopener">Volcano boarding no Cerro Negro</a></div>
@@ -826,8 +1016,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="ame">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Dcg9T2HATrm/" target="_blank" rel="noopener"><img src="img/riviera-maya-mexico.webp" alt="Foto de @alilamayakoba — Riviera Maya · México" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Riviera Maya · México <small>Américas · 1 casa</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Dcg9T2HATrm/" target="_blank" rel="noopener">@alilamayakoba</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.instagram.com/p/Dcg9T2HATrm/" target="_blank" rel="noopener">Alila Mayakoba</a></div>
@@ -838,8 +1033,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="afr">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdMjgTIzpsE/" target="_blank" rel="noopener"><img src="img/namibia.webp" alt="Foto de @motivia.brasil — Namíbia" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Namíbia <small>África · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdMjgTIzpsE/" target="_blank" rel="noopener">@motivia.brasil</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr3">
 <div class="cn"><a href="https://www.instagram.com/p/DdMjgTIzpsE/" target="_blank" rel="noopener">Deserto e Via Láctea</a></div>
@@ -850,8 +1050,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdDek1LiM4a/" target="_blank" rel="noopener"><img src="img/islandia.webp" alt="Foto de @memoriesfromabroad_ — Islândia" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Islândia <small>Europa · 5 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdDek1LiM4a/" target="_blank" rel="noopener">@memoriesfromabroad_</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DdDek1LiM4a/" target="_blank" rel="noopener">Islândia fora do óbvio</a></div>
@@ -886,8 +1091,14 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdBsTrUgu9z/" target="_blank" rel="noopener"><img src="img/ilhas-faroe.webp" alt="Foto de @borealisexpedicoes — Ilhas Faroé" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Ilhas Faroé <small>Europa · 3 lugares</small></h3>
 <p class="cnota">Três salvos — as Faroé estão subindo na tua lista.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdBsTrUgu9z/" target="_blank" rel="noopener">@borealisexpedicoes</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DdBsTrUgu9z/" target="_blank" rel="noopener">Uma Europa completamente diferente</a></div>
@@ -910,8 +1121,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdOm9KrjG6O/" target="_blank" rel="noopener"><img src="img/noruega.webp" alt="Foto de @hotelspt — Noruega" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Noruega <small>Europa · 3 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdOm9KrjG6O/" target="_blank" rel="noopener">@hotelspt</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DdOm9KrjG6O/" target="_blank" rel="noopener">Under — o restaurante submerso</a></div>
@@ -934,8 +1150,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdSCQNhxTuQ/" target="_blank" rel="noopener"><img src="img/austria.webp" alt="Foto de @ronald_soethje — Áustria" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Áustria <small>Europa · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdSCQNhxTuQ/" target="_blank" rel="noopener">@ronald_soethje</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DdSCQNhxTuQ/" target="_blank" rel="noopener">Hallstatt devagar</a></div>
@@ -946,8 +1167,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdZSu-zPDYZ/" target="_blank" rel="noopener"><img src="img/bosnia-e-herzegovina.webp" alt="Foto de @catchagypsea — Bósnia e Herzegovina" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Bósnia e Herzegovina <small>Europa · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdZSu-zPDYZ/" target="_blank" rel="noopener">@catchagypsea</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DdZSu-zPDYZ/" target="_blank" rel="noopener">O road trip que ninguém faz</a></div>
@@ -958,8 +1184,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DSu8LcJCiUS/" target="_blank" rel="noopener"><img src="img/interlaken-suica.webp" alt="Foto de @alpinaboutiquehotel — Interlaken · Suíça" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Interlaken · Suíça <small>Europa · 1 casa</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DSu8LcJCiUS/" target="_blank" rel="noopener">@alpinaboutiquehotel</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.instagram.com/p/DSu8LcJCiUS/" target="_blank" rel="noopener">Alpina Boutique Hotel</a></div>
@@ -970,8 +1201,14 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DaAovG4tzDs/" target="_blank" rel="noopener"><img src="img/italia.webp" alt="Foto de @darlingarireid — Itália" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Itália <small>Europa · 7 lugares · 3 casas</small></h3>
 <p class="cnota">Vista, praia, montanha e até casa pra comprar — a Itália fecha uma viagem sozinha.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DaAovG4tzDs/" target="_blank" rel="noopener">@darlingarireid</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DaAovG4tzDs/" target="_blank" rel="noopener">Lago de Como — Civero Bridge</a></div>
@@ -1036,8 +1273,14 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdZfondDoWT/" target="_blank" rel="noopener"><img src="img/alpes-a-pe-e-de-bike.webp" alt="Foto de @57hours_adventures — Alpes — a pé e de bike" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Alpes — a pé e de bike <small>Europa · 6 lugares</small></h3>
 <p class="cnota">Teu bloco mais salvo da Europa: montanha, trilha e bike.</p>
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdZfondDoWT/" target="_blank" rel="noopener">@57hours_adventures</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DdZfondDoWT/" target="_blank" rel="noopener">Tour du Mont Blanc — 170 km</a></div>
@@ -1078,8 +1321,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DY_6v6turIZ/" target="_blank" rel="noopener"><img src="img/reino-unido.webp" alt="Foto de @grantb_adventures — Reino Unido" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Reino Unido <small>Europa · 3 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DY_6v6turIZ/" target="_blank" rel="noopener">@grantb_adventures</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DY_6v6turIZ/" target="_blank" rel="noopener">Escócia bruta</a></div>
@@ -1102,8 +1350,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DXUP7V3DKga/" target="_blank" rel="noopener"><img src="img/franca.webp" alt="Foto de @grapechic — França" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">França <small>Europa · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DXUP7V3DKga/" target="_blank" rel="noopener">@grapechic</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DXUP7V3DKga/" target="_blank" rel="noopener">Reims em bate-volta</a></div>
@@ -1114,8 +1367,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DcRt7-rBixT/" target="_blank" rel="noopener"><img src="img/holanda.webp" alt="Foto de @karlahill — Holanda" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Holanda <small>Europa · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DcRt7-rBixT/" target="_blank" rel="noopener">@karlahill</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DcRt7-rBixT/" target="_blank" rel="noopener">Amsterdam no verão</a></div>
@@ -1126,8 +1384,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DbolynOsBEb/" target="_blank" rel="noopener"><img src="img/madeira-portugal.webp" alt="Foto de @vistorajourney — Madeira · Portugal" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Madeira · Portugal <small>Europa · 2 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DbolynOsBEb/" target="_blank" rel="noopener">@vistorajourney</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DbolynOsBEb/" target="_blank" rel="noopener">Carrinhos do Monte</a></div>
@@ -1144,8 +1407,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="eur">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DcQ0sDDDLev/" target="_blank" rel="noopener"><img src="img/europa-rotas-e-ideias.webp" alt="Foto de @hotelspt — Europa — rotas e ideias" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Europa — rotas e ideias <small>Europa · 5 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DcQ0sDDDLev/" target="_blank" rel="noopener">@hotelspt</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c duo">
 <div class="cn"><a href="https://www.instagram.com/p/DcQ0sDDDLev/" target="_blank" rel="noopener">Road trips da Europa</a></div>
@@ -1180,8 +1448,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="asia">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DX0V1R9Noyw/" target="_blank" rel="noopener"><img src="img/turquia.webp" alt="Foto de @soeletronica24h — Turquia" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Turquia <small>Ásia e Oriente · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DX0V1R9Noyw/" target="_blank" rel="noopener">@soeletronica24h</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr2">
 <div class="cn"><a href="https://www.instagram.com/p/DX0V1R9Noyw/" target="_blank" rel="noopener">Balões da Capadócia</a></div>
@@ -1192,8 +1465,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="asia">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DaygxbkmuSA/" target="_blank" rel="noopener"><img src="img/china.webp" alt="Foto de @notthesamo — China" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">China <small>Ásia e Oriente · 2 lugares</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DaygxbkmuSA/" target="_blank" rel="noopener">@notthesamo</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr2">
 <div class="cn"><a href="https://www.instagram.com/p/DaygxbkmuSA/" target="_blank" rel="noopener">Café na caverna vulcânica</a></div>
@@ -1210,8 +1488,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="asia">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Daa0bHuPRhY/" target="_blank" rel="noopener"><img src="img/sikkim-india.webp" alt="Foto de @hiddentrip.in — Sikkim · Índia" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Sikkim · Índia <small>Ásia e Oriente · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Daa0bHuPRhY/" target="_blank" rel="noopener">@hiddentrip.in</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr2">
 <div class="cn"><a href="https://www.instagram.com/p/Daa0bHuPRhY/" target="_blank" rel="noopener">Silk Route</a></div>
@@ -1222,8 +1505,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="asia">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdC0STIlj-E/" target="_blank" rel="noopener"><img src="img/raja-ampat-indonesia.webp" alt="Foto de @revistaunquiet — Raja Ampat · Indonésia" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Raja Ampat · Indonésia <small>Ásia e Oriente · 1 casa</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdC0STIlj-E/" target="_blank" rel="noopener">@revistaunquiet</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c casa">
 <div class="cn"><a href="https://www.instagram.com/p/DdC0STIlj-E/" target="_blank" rel="noopener">Misool</a></div>
@@ -1234,8 +1522,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="asia">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/Dc1ulKLBEj2/" target="_blank" rel="noopener"><img src="img/alula-arabia-saudita.webp" alt="Foto de @donaarquiteta — AlUla · Arábia Saudita" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">AlUla · Arábia Saudita <small>Ásia e Oriente · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/Dc1ulKLBEj2/" target="_blank" rel="noopener">@donaarquiteta</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr2">
 <div class="cn"><a href="https://www.instagram.com/p/Dc1ulKLBEj2/" target="_blank" rel="noopener">Os hotéis que desaparecem</a></div>
@@ -1246,8 +1539,13 @@ footer a{color:var(--ink2)}
 </div>
 </section>
 <section class="dest" data-reg="ame">
+<div class="dhead">
+<a class="dcapa" href="https://www.instagram.com/p/DdP5EE1MMRN/" target="_blank" rel="noopener"><img src="img/guatemala.webp" alt="Foto de @stefanogirardelli — Guatemala" loading="lazy" width="168" height="112"></a>
+<div class="dtxt">
 <h3 class="dh">Guatemala <small>Américas · 1 lugar</small></h3>
-
+<p class="dcred">foto de <a href="https://www.instagram.com/p/DdP5EE1MMRN/" target="_blank" rel="noopener">@stefanogirardelli</a></p>
+</div>
+</div>
 <div class="grid dgrid">
 <div class="c pr4">
 <div class="cn"><a href="https://www.instagram.com/p/DdP5EE1MMRN/" target="_blank" rel="noopener">Semuc Champey</a></div>
