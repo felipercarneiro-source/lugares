@@ -137,6 +137,14 @@ footer a{color:var(--ink2)}
   font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:9.5px;
   font-weight:600;letter-spacing:.08em;text-transform:uppercase;line-height:1.5;
   vertical-align:3px;white-space:nowrap}
+.esch{cursor:pointer;user-select:none}
+.esch:hover{opacity:.72}
+.esch .foco{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:10px;
+  font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);
+  border:1px solid var(--line);border-radius:999px;padding:3px 9px 2px;margin-left:10px;
+  white-space:nowrap;vertical-align:4px}
+.esch.on .foco{color:var(--shu);border-color:var(--shu)}
+.chips + .chips{margin-top:7px}
 </style>
 </head>
 <body>
@@ -150,19 +158,20 @@ footer a{color:var(--ink2)}
  <div class="stats">
   <div class="stat"><b>101</b><span>destinos</span></div>
   <div class="stat"><b>184</b><span>vistas e lugares</span></div>
-  <div class="stat"><b>150</b><span>casas e refúgios</span></div>
+  <div class="stat"><b>159</b><span>casas e refúgios</span></div>
   <div class="stat"><b>47</b><span>na fila dos guias</span></div>
  </div>
 </header>
 
 <nav class="tabs" id="tabs">
  <button class="tab on" data-t="plan">🗺 Planejar viagem <span class="n">101 destinos</span></button>
- <button class="tab" data-t="casas">🏡 Só as casas <span class="n">150</span></button>
+ <button class="tab" data-t="casas">🏡 Só as casas <span class="n">159</span></button>
  <button class="tab" data-t="fila">🍜 Na fila dos guias <span class="n">47</span></button>
 </nav>
 
 <section id="sec-plan">
  <div class="chips"><span class="flab">Região</span><button class="chip" data-reg="br">Brasil</button><button class="chip" data-reg="eur">Europa</button><button class="chip" data-reg="asia">Ásia e Oriente</button><button class="chip" data-reg="ame">Américas</button><button class="chip" data-reg="oce">Oceania</button><button class="chip" data-reg="afr">África</button></div>
+ <div class="chips"><span class="flab">Quando</span><button class="chip" data-g="feriado">Pra um feriado</button><button class="chip" data-g="longe">Viagem grande</button></div>
  <div class="legend">A cor diz o que o card é:
   <span class="sw" style="background:#2F8A57"></span>vista no Brasil
   <span class="sw" style="background:#24467C"></span>Europa
@@ -172,9 +181,9 @@ footer a{color:var(--ink2)}
   <span class="sw" style="background:#A93A27"></span>casa pra ficar
  </div>
 
- <h2 class="esch" id="g-feriado">Pra um feriado<small>saindo de São Paulo — carro ou voo curto</small></h2>
-<section class="dest" data-reg="br">
-<h3 class="dh">Serra da Canastra · MG <small>Brasil · 2 lugares · 4 casas</small></h3>
+ <h2 class="esch" id="g-feriado" data-g="feriado" title="clique para ver só este bloco">Pra um feriado<small>saindo de São Paulo — carro ou voo curto</small><span class="foco">só este</span></h2>
+<section class="dest" data-reg="br" data-g="feriado">
+<h3 class="dh">Serra da Canastra · MG <small>Brasil · 2 lugares · 5 casas</small></h3>
 <p class="cnota">Vista de dia, casarão à noite: dá um feriado inteiro na mesma região.</p>
 <div class="grid dgrid">
 <div class="c pr1">
@@ -219,9 +228,16 @@ footer a{color:var(--ink2)}
 <div class="cesp">Domo geodésico de quarenta metros quadrados com pé-direito de quase cinco, cinco minutos do centro por asfalto o caminho inteiro, café da manhã incluso — o contrário exato da Casa do Lago, que fica na mesma cidade</div>
 <div class="who"><span class="lbl">da curadoria da</span> <b>@holmy</b> · <a class="plink" href="https://www.holmy.com.br/hospedagem/domo-embauba/" target="_blank" rel="noopener">ver na Holmy ↗</a></div>
 </div>
+<div class="c casa">
+<div class="cfoto"><img src="img/c/525128c5ba.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
+<div class="cn"><a href="https://www.casacanastra.com.br/" target="_blank" rel="noopener">CasaCanastra</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Serra da Canastra · São Roque de Minas · MG · três chalés</div>
+<div class="cesp">Três chalés — Casal, Família e Experiência —, os dois maiores com fogão a lenha e forno de pizza. Fica no distrito Serra da Canastra, em **São Roque de Minas**, que é a portaria principal do parque, e não em Vargem Bonita nem em Delfinópolis</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Ilhabela · SP <small>Brasil · 4 casas</small></h3>
 <p class="cnota">Onde comer na ilha (Enfim Ostras e cia.) está na aba fila.</p>
 <div class="grid dgrid">
@@ -255,7 +271,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Campos do Jordão · SP <small>Brasil · 6 casas</small></h3>
 <p class="cnota">Seis casas e nenhuma vista da cidade — em Campos, o que se aluga é o silêncio a dez minutos do Capivari.</p>
 <div class="grid dgrid">
@@ -302,7 +318,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Litoral norte · Ubatuba e São Sebastião <small>Brasil · 7 casas</small></h3>
 <p class="cnota">Sete casas entre Picinguaba e São Sebastião — metade pé na areia, metade escondida na mata logo atrás dela.</p>
 <div class="grid dgrid">
@@ -357,7 +373,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Costa Verde · Paraty e Mangaratiba <small>Brasil · 1 lugar · 9 casas</small></h3>
 <p class="cnota">Onde a serra cai no mar, e a cachoeira desemboca quase na praia. A Ilha dos Cocos daqui não tem nada a ver com a Isla del Coco da Costa Rica — são duas ilhas de nome parecido e mundo diferente.</p>
 <div class="grid dgrid">
@@ -433,7 +449,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Vale do Café · RJ <small>Brasil · 1 casa</small></h3>
 <p class="cnota">O ciclo do café deixou dezenas de fazendas entre Vassouras e Valença, e entrar nessa história hospedado numa delas é o jeito menos abstrato de entrar.</p>
 <div class="grid dgrid">
@@ -446,7 +462,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Serra da Mantiqueira <small>Brasil · 22 casas</small></h3>
 <p class="cnota">Vinte e duas casas na mesma serra: a escolha aqui é menos de destino e mais de qual vale se quer ver do deck.</p>
 <div class="grid dgrid">
@@ -606,7 +622,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Serrinha do Alambari · RJ <small>Brasil · 1 lugar</small></h3>
 <p class="cnota">Um poço só, mas vale a subida.</p>
 <div class="grid dgrid">
@@ -619,7 +635,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Visconde de Mauá · RJ <small>Brasil · 1 casa</small></h3>
 <p class="cnota">A vila fica na divisa de Resende com Bocaina de Minas, no pé da Mantiqueira pelo lado do Rio. A primeira casa da lista está cinco quilômetros fora dela, que é onde a vista aparece.</p>
 <div class="grid dgrid">
@@ -632,7 +648,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Parque Nacional do Itatiaia · RJ e MG <small>Brasil · 4 lugares</small></h3>
 <p class="cnota">O primeiro parque nacional do Brasil, e dois parques dentro de um: a parte baixa é mata e cachoeira com carro na porta; a parte alta é campo de altitude a dois mil e setecentos, com cota diária e noite abaixo de zero.</p>
 <div class="grid dgrid">
@@ -665,7 +681,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Petrópolis · RJ <small>Brasil · 5 casas</small></h3>
 <p class="cnota">O ranking do @pousadas.top é só o ponto de partida: ele lê nota pública de Google, Booking e TripAdvisor e não visita nada. O que cada casa é, abaixo, vem da própria casa.</p>
 <div class="grid dgrid">
@@ -706,7 +722,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Piracaia · SP <small>Brasil · 1 casa</small></h3>
 <p class="cnota">Perto de São Paulo o bastante para ir na sexta à noite.</p>
 <div class="grid dgrid">
@@ -719,7 +735,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Bom Jesus dos Perdões · SP <small>Brasil · 1 casa</small></h3>
 <p class="cnota">Perto o bastante para ser decisão de sexta-feira.</p>
 <div class="grid dgrid">
@@ -732,7 +748,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Ibitipoca · MG <small>Brasil · 1 lugar · 1 casa</small></h3>
 <p class="cnota">Seis mil hectares de mata regenerada, com hospedagem dentro e um mirante no fim da caminhada.</p>
 <div class="grid dgrid">
@@ -752,7 +768,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Serra da Moeda · MG <small>Brasil · 1 casa</small></h3>
 <p class="cnota">Quarenta minutos de Belo Horizonte, na crista da serra: perto o bastante pra ir na sexta, alto o bastante pra não parecer.</p>
 <div class="grid dgrid">
@@ -765,7 +781,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Bananal · SP <small>Brasil · 1 lugar</small></h3>
 <p class="cnota">Uma cachoeira que quase ninguém procura, no caminho do Vale do Paraíba.</p>
 <div class="grid dgrid">
@@ -778,7 +794,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Cunha · SP <small>Brasil · 5 casas</small></h3>
 <p class="cnota">Duas casas da mesma fazenda, a Ybituí, viradas para a Serra do Mar. Falta ainda o achado 918 do @achadosguide, que fica aqui e cujo nome o post não diz.</p>
 <div class="grid dgrid">
@@ -819,7 +835,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Serra da Bocaina · SP <small>Brasil · 1 lugar · 1 casa</small></h3>
 <p class="cnota">Uma casa e uma travessia — a Bocaina tem pouca coisa alugável, e é exatamente isso que a mantém como é.</p>
 <div class="grid dgrid">
@@ -839,7 +855,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">São Paulo · SP <small>Brasil · 1 lugar · 1 casa</small></h3>
 <p class="cnota">A cidade dele entra pelo que se vê de cima, e por uma maternidade de 1944 que virou hotel.</p>
 <div class="grid dgrid">
@@ -859,7 +875,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Santa Catarina <small>Brasil · 3 lugares · 6 casas</small></h3>
 <p class="cnota">Os cânions da serra e as cabanas que se alugam por ali.</p>
 <div class="grid dgrid">
@@ -928,7 +944,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Serra Gaúcha · RS <small>Brasil · 4 casas</small></h3>
 <p class="cnota">Quatro casas pequenas e muito diferentes entre si — de container a ofurô japonês — na serra que o resto do país só associa a vinho.</p>
 <div class="grid dgrid">
@@ -962,7 +978,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Campos de Cima da Serra · RS <small>Brasil · 1 lugar</small></h3>
 <p class="cnota">Acima da serra gaúcha e antes dos cânions — planalto de campo aberto, araucária e rio correndo sobre laje.</p>
 <div class="grid dgrid">
@@ -975,7 +991,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Canela · RS <small>Brasil · 1 casa</small></h3>
 <p class="cnota">Um só cartão, e ainda em obra — mas é a volta de um hotel que a serra gaúcha passou cinco anos lamentando ter perdido.</p>
 <div class="grid dgrid">
@@ -987,7 +1003,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Foz do Iguaçu · PR <small>Brasil · 1 lugar · 1 casa</small></h3>
 <p class="cnota">A parte das cataratas que não é a fila do mirante.</p>
 <div class="grid dgrid">
@@ -1007,7 +1023,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Caminhos do Mar · SBC <small>Brasil · 1 lugar</small></h3>
 <p class="cnota">Bate-volta clássico de SP que quase ninguém faz.</p>
 <div class="grid dgrid">
@@ -1020,7 +1036,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Pedra Azul · ES <small>Brasil · 1 casa</small></h3>
 <p class="cnota">Onde comer no ES (Pirá, Garden Bistrô) está na aba fila.</p>
 <div class="grid dgrid">
@@ -1033,7 +1049,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="feriado">
 <h3 class="dh">Vinícola em Minas <small>Brasil · 1 casa</small></h3>
 <p class="cnota">Dormir na vinícola, que é o que muda a visita.</p>
 <div class="grid dgrid">
@@ -1046,8 +1062,8 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
- <h2 class="esch" id="g-longe">Viagem grande<small>pede planejamento — Brasil longe e mundo afora</small></h2>
-<section class="dest" data-reg="br">
+ <h2 class="esch" id="g-longe" data-g="longe" title="clique para ver só este bloco">Viagem grande<small>pede planejamento — Brasil longe e mundo afora</small><span class="foco">só este</span></h2>
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Lençóis Maranhenses · MA <small>Brasil · 3 lugares · 1 casa</small></h3>
 <p class="cnota">Melhor época: fim das chuvas (jun–set), com as lagoas cheias.</p>
 <div class="grid dgrid">
@@ -1081,7 +1097,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Atins · MA <small>Brasil · 2 lugares · 1 casa</small></h3>
 <p class="cnota">Vizinha dos Lençóis e, por decisão dele, destino à parte.</p>
 <div class="grid dgrid">
@@ -1108,7 +1124,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Pantanal <small>Brasil · 1 lugar</small></h3>
 <p class="cnota">O barco é a casa e a natureza manda no horário.</p>
 <div class="grid dgrid">
@@ -1121,7 +1137,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Bonito · MS <small>Brasil · 1 lugar</small></h3>
 <p class="cnota">A água transparente tem explicação geológica, e ela está no cartão.</p>
 <div class="grid dgrid">
@@ -1134,7 +1150,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Chapada dos Guimarães · MT <small>Brasil · 4 lugares · 1 casa</small></h3>
 <p class="cnota">O centro geodésico da América do Sul, e o parque onde a regra pesa mais que a trilha: cota diária, portão que fecha ao meio-dia e condutor obrigatório em metade dos atrativos.</p>
 <div class="grid dgrid">
@@ -1163,6 +1179,7 @@ footer a{color:var(--ink2)}
 <div class="who"><span class="lbl">indicação do</span> <b>Felipe</b> · <a class="plink" href="https://www.penaestrada.blog.br/cavernas-na-chapada-dos-guimaraes/" target="_blank" rel="noopener">o levantamento das cavernas ↗</a></div>
 </div>
 <div class="c casa">
+<div class="cfoto"><img src="img/c/4def6d3451.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
 <div class="cn"><a href="https://www.pousadadoparque.com.br/" target="_blank" rel="noopener">Pousada do Parque</a></div>
 <div class="cloc"><span class="t">casa pra ficar</span> · Chapada dos Guimarães · MT · dez apartamentos</div>
 <div class="cesp">Dez apartamentos rústicos a setecentos e cinquenta metros de altitude, dentro de uma reserva particular de quinhentos hectares colada no limite do Parque Nacional, com trilhas e mirante próprios. Entra-se pela MT-251, km 52, e depois são cinco quilômetros de cascalho. Roteiros de Charme</div>
@@ -1170,9 +1187,9 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
-<h3 class="dh">Chapada dos Veadeiros · GO <small>Brasil · 4 lugares</small></h3>
-<p class="cnota">O ingresso é de quarenta e nove reais, vale só para a data comprada e não se remarca. Mas o que derruba gente não é o preço: é o horário. **O acesso a pé fecha ao meio-dia** e todo mundo tem de estar fora às seis. As trilhas são autoguiadas — guia não é obrigatório dentro do parque.</p>
+<section class="dest" data-reg="br" data-g="longe">
+<h3 class="dh">Chapada dos Veadeiros · GO <small>Brasil · 4 lugares · 7 casas</small></h3>
+<p class="cnota">O ingresso é de quarenta e nove reais, vale só para a data comprada e não se remarca. Mas o que derruba gente não é o preço: é o horário. **O acesso a pé fecha ao meio-dia** e todo mundo tem de estar fora às seis. As trilhas são autoguiadas — guia não é obrigatório dentro do parque. E o entorno virou, nos últimos anos, a maior concentração de casa de arquitetura do cerrado.</p>
 <div class="grid dgrid">
 <div class="c pr1">
 <div class="cn"><a href="https://pnchapadadosveadeiros.com.br/o-parque/" target="_blank" rel="noopener">Trilha dos Saltos</a></div>
@@ -1198,10 +1215,55 @@ footer a{color:var(--ink2)}
 <div class="cesp">Duas fazendas fora do parque, no mesmo eixo. A Catarata dos Couros é uma sequência de quedas e poços no cerrado, com quarenta minutos e pouco de estrada de terra que piora muito depois de chuva. As Loquinhas são poços rasos e claros, bons de família — e **fecham quando chove ou choveu forte na véspera, por risco de cabeça d’água**. Os valores que circulam são de antes de 2021; confirme na portaria</div>
 <div class="who"><span class="lbl">indicação do</span> <b>Felipe</b> · <a class="plink" href="https://viajapinha.com.br/loquinhas-e-catarata-dos-couros-como-chegar-chapada-dos-veadeiros/" target="_blank" rel="noopener">como chegar ↗</a></div>
 </div>
+<div class="c casa">
+<div class="cfoto"><img src="img/c/856129cf28.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
+<div class="cn"><a href="https://vilatoa.com.br/" target="_blank" rel="noopener">Vila Toá</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Alto Paraíso de Goiás · GO · dezessete bangalôs</div>
+<div class="cesp">Dezessete bangalôs no alto da montanha, com piscina de borda infinita virada para a Serra da Baliza e restaurante dentro da propriedade. É a maior desta leva, e a que menos parece grande</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cn"><a href="https://miranteatria.com.br/" target="_blank" rel="noopener">Mirante Átria</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Alto Paraíso de Goiás · GO · só para casais</div>
+<div class="cesp">Cabanas a dezessete quilômetros da cidade — doze de asfalto e cinco de chão — no caminho de São Jorge, cada uma com cozinha completa, hidromassagem virada para a serra, Starlink e energia solar **fora da rede**. Não aceita crianças nem animais. O post não dá o nome do perfil; é @miranteatria, e o total de cabanas não é publicado</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cfoto"><img src="img/c/da26abca62.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
+<div class="cn"><a href="https://majule.com.br/" target="_blank" rel="noopener">Majulê Ecolodge</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Cavalcante · GO · seis unidades</div>
+<div class="cesp">Seis unidades espalhadas por mais de cento e vinte mil metros quadrados de cerrado preservado, **cada uma com piscina privativa aquecida**, fibra óptica e carregador de carro elétrico na propriedade. Seiscentos metros de estrada de terra a partir da rodovia</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cn"><a href="https://amanahotel.com.br/" target="_blank" rel="noopener">Amaná Hotel</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · São Jorge · Alto Paraíso · GO · doze bangalôs</div>
+<div class="cesp">Doze bangalôs de casal em **quarenta hectares de cerrado preservado**, na Chácara Vale das Araras — a entrada é compartilhada com a do Vale da Lua, o que quer dizer dormir do lado do lugar mais fotografado da chapada. Tem spa, e a idade mínima é catorze anos</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cfoto"><img src="img/c/2247e50161.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
+<div class="cn"><a href="https://vilacerrado.com.br/acomodacoes/" target="_blank" rel="noopener">Vila Cerrado</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Alto Paraíso de Goiás · GO · cinco acomodações</div>
+<div class="cesp">Três casas e dois chalés com nome de árvore do cerrado — Buriti, Copaíba, Jatobá, Baru e Pequi. Várias têm **banheiro ao ar livre, com banheira de imersão esculpida em pedra**; a Casa Buriti tem setenta metros quadrados</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cn"><a href="https://glampingchapadadosveadeiros.com/glamping-in-chapada-dos-veadeiros-hidden-treasure/" target="_blank" rel="noopener">Hidden Treasure</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Alto Paraíso de Goiás · GO · quatro domos</div>
+<div class="cesp">Quatro domos ligados por passarelas de madeira suspensas, feitas para não pisar o solo; cada um tem deck próprio e banheiro com água quente, e um deles tem banheira. Até três pessoas por domo. **O endereço só é informado depois da reserva confirmada**</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cn"><a href="https://www.airbnb.com/rooms/1324818447207417708" target="_blank" rel="noopener">Domo Xangô</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Alto Paraíso de Goiás · GO · um domo só</div>
+<div class="cesp">Um domo geodésico de oito metros, sozinho no terreno, a catorze quilômetros da cidade — e os últimos cem metros são trilha na mata. Deck panorâmico com vista de trezentos e sessenta graus do vale, dois quartos, até cinco pessoas. **Não tem site nem perfil: vive só no Airbnb**</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o anúncio ↗</a></div>
+</div>
 </div>
 </section>
-<section class="dest" data-reg="br">
-<h3 class="dh">Jalapão · TO <small>Brasil · 5 lugares · 1 casa</small></h3>
+<section class="dest" data-reg="br" data-g="longe">
+<h3 class="dh">Jalapão · TO <small>Brasil · 5 lugares · 2 casas</small></h3>
 <p class="cnota">Dunas, fervedouros e uma serra que se sobe às cinco da manhã. Tudo aqui tem cota diária, condutor credenciado obrigatório e agendamento com quatro dias de antecedência — e a estrada exige 4x4 de verdade. Seca de maio a setembro.</p>
 <div class="grid dgrid">
 <div class="c pr1">
@@ -1241,9 +1303,16 @@ footer a{color:var(--ink2)}
 <div class="cesp">Catorze acomodações rústicas a duas horas e meia de Palmas **por asfalto** — é a última noite civilizada antes do off-road. De Ponte Alta em diante o chão é areia fofa e **só 4x4 passa pela portaria do parque**; não é conselho de folheto, é regra de entrada</div>
 <div class="who"><span class="lbl">indicação do</span> <b>Felipe</b> · <a class="plink" href="https://pousadavilladossonhos.com.br/" target="_blank" rel="noopener">site oficial ↗</a></div>
 </div>
+<div class="c casa">
+<div class="cfoto"><img src="img/c/3d371c61e6.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
+<div class="cn"><a href="https://korubo.com.br/safari-no-jalapao/" target="_blank" rel="noopener">Korubo Safari Camp</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Rio Novo · Mateiros · TO · só por expedição</div>
+<div class="cesp">Tendas de estilo africano sobre palafitas às margens do Rio Novo, a cento e vinte quilômetros de Ponte Alta por estrada de terra, com energia de bateria solar e banheiro coletivo em cabines. **Não se reserva diária: só se entra comprando expedição** de seis, sete ou dez dias, em grupos de até vinte e cinco pessoas. E é dela o acesso exclusivo ao **Fervedouro do Soninho**, que o índice já registrava como &quot;só por agência&quot; sem saber qual</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Bahia <small>Brasil · 3 casas</small></h3>
 <p class="cnota">Três casas em três litorais diferentes da mesma Bahia. A Chapada Diamantina saiu daqui e virou destino próprio.</p>
 <div class="grid dgrid">
@@ -1270,7 +1339,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Chapada Diamantina · BA <small>Brasil · 6 lugares · 1 casa</small></h3>
 <p class="cnota">O achado da pesquisa: dentro do Parque Nacional não há ingresso nem guia obrigatório por norma — quem cobra e quem exige são as camadas de fora, o parque municipal, a fazenda e a associação de condutores. Cada cartão diz qual é o caso.</p>
 <div class="grid dgrid">
@@ -1318,7 +1387,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Praia do Espelho · BA <small>Brasil · 1 casa</small></h3>
 <p class="cnota">Entre Trancoso e Caraíva, no fim de uma estrada de terra que atravessa rio — e é isso que a mantém como está.</p>
 <div class="grid dgrid">
@@ -1331,7 +1400,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Praia do Forte · BA <small>Brasil · 1 casa</small></h3>
 <p class="cnota">A casa que ele aluga, nas piscinas naturais.</p>
 <div class="grid dgrid">
@@ -1344,7 +1413,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Boipeba · BA <small>Brasil · 2 casas</small></h3>
 <p class="cnota">Duas casas e nenhuma estrada: para chegar em Boipeba se troca de barco, e é exatamente isso que a mantém como é.</p>
 <div class="grid dgrid">
@@ -1364,7 +1433,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Barra Grande · Península de Maraú <small>Brasil · 1 lugar · 1 casa</small></h3>
 <p class="cnota">Casa de um lado, cachoeira do outro, na mesma península.</p>
 <div class="grid dgrid">
@@ -1384,7 +1453,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Fernando de Noronha · PE <small>Brasil · 1 casa</small></h3>
 <p class="cnota">A pousada que já virou instituição na ilha.</p>
 <div class="grid dgrid">
@@ -1397,7 +1466,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Cânions do Xingó · AL/SE <small>Brasil · 1 lugar</small></h3>
 <p class="cnota">O São Francisco entre paredões, e se entra de barco.</p>
 <div class="grid dgrid">
@@ -1410,7 +1479,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Piauí <small>Brasil · 2 lugares · 2 casas</small></h3>
 <p class="cnota">Dois lugares de sertão bruto que quase ninguém procura — e, agora, onde dormir antes e depois deles.</p>
 <div class="grid dgrid">
@@ -1444,7 +1513,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Agreste pernambucano <small>Brasil · 1 lugar</small></h3>
 <p class="cnota">Um arco de pedra no meio do agreste.</p>
 <div class="grid dgrid">
@@ -1457,7 +1526,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">João Pessoa · PB <small>Brasil · 1 casa</small></h3>
 <p class="cnota">A capital entra pela orla do Cabo Branco, que é onde a cidade fica de frente para o mar.</p>
 <div class="grid dgrid">
@@ -1470,7 +1539,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Litoral de Alagoas <small>Brasil · 1 lugar · 3 casas</small></h3>
 <p class="cnota">Dunas de um lado; do outro, a Rota Ecológica dos Milagres, que é onde estão as três casas.</p>
 <div class="grid dgrid">
@@ -1504,7 +1573,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Tatajuba · Ceará <small>Brasil · 1 casa</small></h3>
 <p class="cnota">Duna, lagoa e uma casa só, longe de Jeri.</p>
 <div class="grid dgrid">
@@ -1517,7 +1586,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Jericoacoara · CE <small>Brasil · 2 casas</small></h3>
 <p class="cnota">A vila que o índice vinha contornando, e que entra por dois endereços da mesma casa: um para sumir, outro para ficar no meio do barulho.</p>
 <div class="grid dgrid">
@@ -1536,7 +1605,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Preá · CE <small>Brasil · 2 casas</small></h3>
 <p class="cnota">Vizinha de Jericoacoara, com a vantagem de não ser Jericoacoara.</p>
 <div class="grid dgrid">
@@ -1556,7 +1625,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="br">
+<section class="dest" data-reg="br" data-g="longe">
 <h3 class="dh">Tabatinga e Baía dos Golfinhos · RN <small>Brasil · 1 lugar</small></h3>
 <p class="cnota">Casa que se recomende por ali, nenhuma até agora; a vista terá de bastar.</p>
 <div class="grid dgrid">
@@ -1569,7 +1638,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="asia">
+<section class="dest" data-reg="asia" data-g="longe">
 <h3 class="dh">Quirguistão <small>Ásia e Oriente · 2 lugares · 1 casa</small></h3>
 <p class="cnota">O lago tem nome e a expedição tem dono — é por aí que se chega.</p>
 <div class="grid dgrid">
@@ -1596,7 +1665,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="asia">
+<section class="dest" data-reg="asia" data-g="longe">
 <h3 class="dh">Cazaquistão <small>Ásia e Oriente · 1 lugar</small></h3>
 <p class="cnota">Combina com o Quirguistão numa expedição só pela Ásia Central.</p>
 <div class="grid dgrid">
@@ -1609,7 +1678,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Groenlândia <small>Américas · 2 lugares</small></h3>
 <p class="cnota">Oito dias entre icebergs, dormindo no próprio veleiro.</p>
 <div class="grid dgrid">
@@ -1629,7 +1698,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Patagônia · Chile &amp; Argentina <small>Américas · 4 lugares</small></h3>
 <p class="cnota">Os dois lados da mesma cordilheira, mais a costa onde as baleias param.</p>
 <div class="grid dgrid">
@@ -1663,7 +1732,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Bariloche e os Sete Lagos · Argentina <small>Américas · 2 lugares</small></h3>
 <p class="cnota">Cento e dez quilômetros de estrada e um bosque que ficou dentro do lago.</p>
 <div class="grid dgrid">
@@ -1683,7 +1752,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Jujuy · Argentina <small>Américas · 2 lugares</small></h3>
 <p class="cnota">O altiplano colorido, com o salar a uma hora da quebrada.</p>
 <div class="grid dgrid">
@@ -1703,7 +1772,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Andes <small>Américas · 5 lugares</small></h3>
 <p class="cnota">O que se faz na cordilheira quando não se está só atravessando.</p>
 <div class="grid dgrid">
@@ -1744,7 +1813,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Passos de cordilheira · Argentina e Chile <small>Américas · 4 lugares</small></h3>
 <p class="cnota">Quatro travessias que ele fez de moto e de caminhonete.</p>
 <div class="grid dgrid">
@@ -1778,7 +1847,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Bolívia <small>Américas · 1 lugar · 1 casa</small></h3>
 <p class="cnota">O salar e o que se arruma para dormir nele.</p>
 <div class="grid dgrid">
@@ -1798,7 +1867,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Peru <small>Américas · 4 lugares</small></h3>
 <p class="cnota">Quatro paradas da expedição do Maurício, nenhuma delas Machu Picchu.</p>
 <div class="grid dgrid">
@@ -1832,7 +1901,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Arica · Chile <small>Américas · 1 casa</small></h3>
 <p class="cnota">A ponta norte do Chile, onde o deserto encosta no mar.</p>
 <div class="grid dgrid">
@@ -1845,7 +1914,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Pucón · Chile <small>Américas · 1 lugar</small></h3>
 <p class="cnota">Um vulcão ativo de cratera aberta, e sobe-se nele.</p>
 <div class="grid dgrid">
@@ -1858,7 +1927,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">América do Norte <small>Américas · 2 lugares</small></h3>
 <p class="cnota">Duas maneiras de entrar num cânion: a pé de madrugada e a cavalo.</p>
 <div class="grid dgrid">
@@ -1878,7 +1947,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Nicarágua <small>Américas · 1 lugar</small></h3>
 <p class="cnota">Descer um vulcão de tábua, que é coisa que só existe ali.</p>
 <div class="grid dgrid">
@@ -1891,7 +1960,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Riviera Maya · México <small>Américas · 1 casa</small></h3>
 <p class="cnota">Uma casa só — a que justifica a parada.</p>
 <div class="grid dgrid">
@@ -1904,7 +1973,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="afr">
+<section class="dest" data-reg="afr" data-g="longe">
 <h3 class="dh">Namíbia <small>África · 1 lugar</small></h3>
 <p class="cnota">Deserto sem luz nenhuma, que é o que faz a Via Láctea aparecer.</p>
 <div class="grid dgrid">
@@ -1917,7 +1986,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="afr">
+<section class="dest" data-reg="afr" data-g="longe">
 <h3 class="dh">Ilhas da África — cinco endereços <small>África · 5 casas</small></h3>
 <p class="cnota">Nenhum tem mais de quinze acomodações, e em todos o caminho até a porta já faz parte da viagem.</p>
 <div class="grid dgrid">
@@ -1958,7 +2027,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="afr">
+<section class="dest" data-reg="afr" data-g="longe">
 <h3 class="dh">Quênia <small>África · 1 casa</small></h3>
 <p class="cnota">Uma casa só, e é por causa dela.</p>
 <div class="grid dgrid">
@@ -1971,7 +2040,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="afr">
+<section class="dest" data-reg="afr" data-g="longe">
 <h3 class="dh">Corrida das sardinhas · África do Sul <small>África · 3 lugares</small></h3>
 <p class="cnota">De maio a julho, e em alguns anos simplesmente não acontece — 2003 e 2006 passaram em branco, e em 2026 a água esquentou em junho e travou tudo.</p>
 <div class="grid dgrid">
@@ -1998,7 +2067,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Islândia <small>Europa · 9 lugares</small></h3>
 <p class="cnota">A ilha fora do Golden Circle: sete lugares que o roteiro padrão pula, e a travessia de quatro dias.</p>
 <div class="grid dgrid">
@@ -2067,7 +2136,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Ilhas Faroé <small>Europa · 3 lugares</small></h3>
 <p class="cnota">Três salvos — as Faroé estão subindo na tua lista.</p>
 <div class="grid dgrid">
@@ -2094,7 +2163,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Noruega <small>Europa · 3 lugares</small></h3>
 <p class="cnota">Um restaurante submerso, uma pedra suspensa e uma estrada que se desce de wingsuit.</p>
 <div class="grid dgrid">
@@ -2121,7 +2190,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Áustria <small>Europa · 1 lugar</small></h3>
 <p class="cnota">Hallstatt fora do horário do ônibus de excursão.</p>
 <div class="grid dgrid">
@@ -2134,7 +2203,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Bósnia e Herzegovina <small>Europa · 1 lugar</small></h3>
 <p class="cnota">O road trip que ninguém faz, que é exatamente a razão de fazer.</p>
 <div class="grid dgrid">
@@ -2147,7 +2216,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Interlaken · Suíça <small>Europa · 1 casa</small></h3>
 <p class="cnota">Uma casa só, para usar os Alpes de base.</p>
 <div class="grid dgrid">
@@ -2160,7 +2229,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Itália <small>Europa · 8 lugares · 4 casas</small></h3>
 <p class="cnota">Vista, praia, cidade e até casa pra comprar — e quatro lugares que parecem invenção. As Dolomitas saíram daqui e ganharam bloco próprio.</p>
 <div class="grid dgrid">
@@ -2250,7 +2319,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Dolomitas · Itália <small>Europa · 17 lugares · 3 casas</small></h3>
 <p class="cnota">A parte difícil aqui não é achar o lugar, é entrar nele: vários destes pontos têm cota, reserva ou estrada fechada por horário. O primeiro cartão é o roteiro de sete dias que amarra doze paradas em um loop de 362 km; o resto são os lugares, um a um.</p>
 <div class="grid dgrid">
@@ -2390,7 +2459,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Valtellina · Bormio e os passos <small>Europa · 3 lugares · 1 casa</small></h3>
 <p class="cnota">Bormio é o único lugar da Europa onde Stelvio, Gavia e Mortirolo saem da mesma porta — e a porta, aqui, tem nome: a do Daniele.</p>
 <div class="grid dgrid">
@@ -2421,7 +2490,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Alpes — a pé e de bike <small>Europa · 6 lugares</small></h3>
 <p class="cnota">Teu bloco mais salvo da Europa: montanha, trilha e bike.</p>
 <div class="grid dgrid">
@@ -2469,7 +2538,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Reino Unido <small>Europa · 3 lugares</small></h3>
 <p class="cnota">A Escócia bruta: Glen Coe, Skye e o silêncio entre os dois.</p>
 <div class="grid dgrid">
@@ -2496,7 +2565,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">França <small>Europa · 11 lugares · 1 casa</small></h3>
 <p class="cnota">Ele mandou refazer a França com o mesmo critério do resto: nada de cartão-postal. O que ficou foi estrada escavada na rocha, aldeia sem estrada, cota de parque nacional e uma noite dentro de um observatório a dois mil oitocentos e setenta e sete metros.</p>
 <div class="grid dgrid">
@@ -2576,7 +2645,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">País Basco · o vale do Etxebarri <small>Europa · 6 lugares · 1 casa</small></h3>
 <p class="cnota">Ele pediu &quot;a região onde fica o Asador Etxebari, San Lorenzo acho q chama&quot;. Não é San Lorenzo: é Axpe, no vale de Atxondo, e o endereço é a Praça San Juan — daí a troca. O que faz a viagem não é só a mesa: é o vale, o Anboto com a cova da deusa Mari e a costa de Urdaibai a quarenta minutos.</p>
 <div class="grid dgrid">
@@ -2624,7 +2693,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Portugal · o continente <small>Europa · 5 lugares · 3 casas</small></h3>
 <p class="cnota">Sem Lisboa, sem Sintra e sem Benagil. O que sobra é a serra, o Douro, uma aldeia que reaparece quando a albufeira baixa e a única falésia do mundo onde a cegonha faz ninho sobre o mar.</p>
 <div class="grid dgrid">
@@ -2678,7 +2747,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Açores <small>Europa · 2 lugares · 1 casa</small></h3>
 <p class="cnota">Duas ilhas e duas escalas: o ponto mais alto de Portugal, que se sobe com rastreador e cota, e a ilha das Flores, onde a estrada acaba antes da paisagem começar.</p>
 <div class="grid dgrid">
@@ -2702,7 +2771,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Madeira · Portugal <small>Europa · 4 lugares</small></h3>
 <p class="cnota">As levadas, a descida de vime — e a Madeira que quase ninguém anda: a floresta de nevoeiro e a península seca. Desde dezembro de 2025 os percursos classificados têm reserva obrigatória por janela de trinta minutos.</p>
 <div class="grid dgrid">
@@ -2734,7 +2803,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="eur">
+<section class="dest" data-reg="eur" data-g="longe">
 <h3 class="dh">Rotas de carro na Europa <small>Europa · 2 lugares</small></h3>
 <p class="cnota">Duas rotas para dirigir, com os nomes de cada trecho.</p>
 <div class="grid dgrid">
@@ -2754,7 +2823,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="asia">
+<section class="dest" data-reg="asia" data-g="longe">
 <h3 class="dh">Turquia <small>Ásia e Oriente · 1 lugar · 1 casa</small></h3>
 <p class="cnota">Os balões da Capadócia, que só sobem de madrugada.</p>
 <div class="grid dgrid">
@@ -2774,7 +2843,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="asia">
+<section class="dest" data-reg="asia" data-g="longe">
 <h3 class="dh">China <small>Ásia e Oriente · 1 lugar · 2 casas</small></h3>
 <p class="cnota">O país mais subestimado por quem gosta de hotel — e um café dentro de uma caverna.</p>
 <div class="grid dgrid">
@@ -2801,7 +2870,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="asia">
+<section class="dest" data-reg="asia" data-g="longe">
 <h3 class="dh">Sikkim · Índia <small>Ásia e Oriente · 1 lugar</small></h3>
 <p class="cnota">A rota da seda pelo lado indiano do Himalaia.</p>
 <div class="grid dgrid">
@@ -2814,7 +2883,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="asia">
+<section class="dest" data-reg="asia" data-g="longe">
 <h3 class="dh">Raja Ampat · Indonésia <small>Ásia e Oriente · 1 casa</small></h3>
 <p class="cnota">Uma casa só, no meio do arquipélago mais biodiverso do mar.</p>
 <div class="grid dgrid">
@@ -2827,7 +2896,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="asia">
+<section class="dest" data-reg="asia" data-g="longe">
 <h3 class="dh">Filipinas <small>Ásia e Oriente · 3 lugares · 3 casas</small></h3>
 <p class="cnota">Ele salvou uma foto daqui sem endereço, de um post que vende guia. O que se sustenta com fonte está abaixo — e junto vai o aviso: El Nido recebeu quinhentos mil visitantes em 2023, contra trezentos e onze mil em 2019, e o Banco Asiático de Desenvolvimento calculou setenta pessoas por dia de capacidade no lago Kayangan, em Coron, onde o pico real foi de seiscentas e três. Coron entra quando houver foto com crédito que mostre o lugar.</p>
 <div class="grid dgrid">
@@ -2875,7 +2944,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="oce">
+<section class="dest" data-reg="oce" data-g="longe">
 <h3 class="dh">Palau, Yap e Guam <small>Oceania · 3 lugares</small></h3>
 <p class="cnota">Ele pediu &quot;Micronésia&quot;, e o mapa junta os três — mas são três países diferentes no papel: Palau é independente, Yap é um estado dos Estados Federados da Micronésia e Guam é território americano. A diferença aparece no visto e no jeito de voar entre eles.</p>
 <div class="grid dgrid">
@@ -2899,7 +2968,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="asia">
+<section class="dest" data-reg="asia" data-g="longe">
 <h3 class="dh">Maldivas <small>Ásia e Oriente · 1 casa</small></h3>
 <p class="cnota">O tipo de endereço que dispensa apresentação e cobra por ela.</p>
 <div class="grid dgrid">
@@ -2912,7 +2981,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="asia">
+<section class="dest" data-reg="asia" data-g="longe">
 <h3 class="dh">AlUla · Arábia Saudita <small>Ásia e Oriente · 1 casa</small></h3>
 <p class="cnota">Três hotéis que a arquitetura escondeu na própria rocha.</p>
 <div class="grid dgrid">
@@ -2925,7 +2994,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="asia">
+<section class="dest" data-reg="asia" data-g="longe">
 <h3 class="dh">Mar Vermelho · Arábia Saudita <small>Ásia e Oriente · 1 casa</small></h3>
 <p class="cnota">O país abriu ao turismo em 2019 e construiu a costa inteira de uma vez; o que já existe de verdade, e abre a porta, ainda é pouco.</p>
 <div class="grid dgrid">
@@ -2938,7 +3007,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Guatemala <small>Américas · 1 lugar</small></h3>
 <p class="cnota">As piscinas de Semuc Champey, empilhadas sobre um rio subterrâneo.</p>
 <div class="grid dgrid">
@@ -2951,7 +3020,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Venezuela <small>Américas · 3 lugares · 2 casas</small></h3>
 <p class="cnota">A Gol voltou a voar de São Paulo em setembro de 2026, mas o país segue em nível 3 no aviso do Departamento de Estado americano e os dois lugares só se alcançam por voo doméstico — não é viagem de improviso.</p>
 <div class="grid dgrid">
@@ -2991,7 +3060,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Galápagos · Equador <small>Américas · 1 casa</small></h3>
 <p class="cnota">Darwin e Wolf só se alcançam de barco-casa, e poucos têm licença.</p>
 <div class="grid dgrid">
@@ -3004,7 +3073,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="ame">
+<section class="dest" data-reg="ame" data-g="longe">
 <h3 class="dh">Ilha do Coco · Costa Rica <small>Américas · 1 casa</small></h3>
 <p class="cnota">Quinhentos quilômetros mar adentro, e a casa é o barco. Não é a ilha do Coco de Angra dos Reis: esta é a Isla del Coco, no Pacífico da Costa Rica.</p>
 <div class="grid dgrid">
@@ -3017,7 +3086,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="oce">
+<section class="dest" data-reg="oce" data-g="longe">
 <h3 class="dh">Papua-Nova Guiné <small>Oceania · 1 casa</small></h3>
 <p class="cnota">O Mar de Bismarck, onde o coral tem mais espécie por metro do que em qualquer lugar.</p>
 <div class="grid dgrid">
@@ -3030,7 +3099,7 @@ footer a{color:var(--ink2)}
 </div>
 </div>
 </section>
-<section class="dest" data-reg="oce">
+<section class="dest" data-reg="oce" data-g="longe">
 <h3 class="dh">Mar de Coral · Austrália <small>Oceania · 1 lugar · 1 casa</small></h3>
 <p class="cnota">Quatro dos live-aboards que ele pediu: aqui a casa é o barco.</p>
 <div class="grid dgrid">
@@ -4036,6 +4105,7 @@ footer a{color:var(--ink2)}
 <div class="who"><span class="lbl">indicação do</span> <b>Felipe</b> · <a class="plink" href="https://www.pousadamangabeiras.com.br/" target="_blank" rel="noopener">site oficial ↗</a></div>
 </div>
 <div class="c casa">
+<div class="cfoto"><img src="img/c/4def6d3451.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
 <div class="cn"><a href="https://www.pousadadoparque.com.br/" target="_blank" rel="noopener">Pousada do Parque</a></div>
 <div class="cloc"><span class="t">casa pra ficar</span> · Chapada dos Guimarães · MT · dez apartamentos</div>
 <div class="cesp">Dez apartamentos rústicos a setecentos e cinquenta metros de altitude, dentro de uma reserva particular de quinhentos hectares colada no limite do Parque Nacional, com trilhas e mirante próprios. Entra-se pela MT-251, km 52, e depois são cinco quilômetros de cascalho. Roteiros de Charme</div>
@@ -4088,6 +4158,65 @@ footer a{color:var(--ink2)}
 <div class="cloc"><span class="t">casa pra ficar</span> · Barrio San Juan · Axpe · Atxondo</div>
 <div class="cesp">Um caserío restaurado a poucos metros do Etxebarri, aos pés do Anboto — literalmente o lugar onde se dorme para poder comer. O hotel anuncia onze quartos e data a casa de 1745; **o registro oficial de alojamentos do Governo Basco diz doze quartos e 1815** — as duas versões estão publicadas. Tem restaurante próprio, com menção no Michelin. **O Etxebarri não tem hospedagem**, então é aqui ou fora do vale</div>
 <div class="who"><span class="lbl">indicação do</span> <b>Felipe</b> · <a class="plink" href="https://mendigoikoabekoa.com/el-hotel/" target="_blank" rel="noopener">site oficial ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cfoto"><img src="img/c/856129cf28.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
+<div class="cn"><a href="https://vilatoa.com.br/" target="_blank" rel="noopener">Vila Toá</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Alto Paraíso de Goiás · GO · dezessete bangalôs</div>
+<div class="cesp">Dezessete bangalôs no alto da montanha, com piscina de borda infinita virada para a Serra da Baliza e restaurante dentro da propriedade. É a maior desta leva, e a que menos parece grande</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cn"><a href="https://miranteatria.com.br/" target="_blank" rel="noopener">Mirante Átria</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Alto Paraíso de Goiás · GO · só para casais</div>
+<div class="cesp">Cabanas a dezessete quilômetros da cidade — doze de asfalto e cinco de chão — no caminho de São Jorge, cada uma com cozinha completa, hidromassagem virada para a serra, Starlink e energia solar **fora da rede**. Não aceita crianças nem animais. O post não dá o nome do perfil; é @miranteatria, e o total de cabanas não é publicado</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cfoto"><img src="img/c/da26abca62.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
+<div class="cn"><a href="https://majule.com.br/" target="_blank" rel="noopener">Majulê Ecolodge</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Cavalcante · GO · seis unidades</div>
+<div class="cesp">Seis unidades espalhadas por mais de cento e vinte mil metros quadrados de cerrado preservado, **cada uma com piscina privativa aquecida**, fibra óptica e carregador de carro elétrico na propriedade. Seiscentos metros de estrada de terra a partir da rodovia</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cn"><a href="https://amanahotel.com.br/" target="_blank" rel="noopener">Amaná Hotel</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · São Jorge · Alto Paraíso · GO · doze bangalôs</div>
+<div class="cesp">Doze bangalôs de casal em **quarenta hectares de cerrado preservado**, na Chácara Vale das Araras — a entrada é compartilhada com a do Vale da Lua, o que quer dizer dormir do lado do lugar mais fotografado da chapada. Tem spa, e a idade mínima é catorze anos</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cfoto"><img src="img/c/2247e50161.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
+<div class="cn"><a href="https://vilacerrado.com.br/acomodacoes/" target="_blank" rel="noopener">Vila Cerrado</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Alto Paraíso de Goiás · GO · cinco acomodações</div>
+<div class="cesp">Três casas e dois chalés com nome de árvore do cerrado — Buriti, Copaíba, Jatobá, Baru e Pequi. Várias têm **banheiro ao ar livre, com banheira de imersão esculpida em pedra**; a Casa Buriti tem setenta metros quadrados</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cn"><a href="https://glampingchapadadosveadeiros.com/glamping-in-chapada-dos-veadeiros-hidden-treasure/" target="_blank" rel="noopener">Hidden Treasure</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Alto Paraíso de Goiás · GO · quatro domos</div>
+<div class="cesp">Quatro domos ligados por passarelas de madeira suspensas, feitas para não pisar o solo; cada um tem deck próprio e banheiro com água quente, e um deles tem banheira. Até três pessoas por domo. **O endereço só é informado depois da reserva confirmada**</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cn"><a href="https://www.airbnb.com/rooms/1324818447207417708" target="_blank" rel="noopener">Domo Xangô</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Alto Paraíso de Goiás · GO · um domo só</div>
+<div class="cesp">Um domo geodésico de oito metros, sozinho no terreno, a catorze quilômetros da cidade — e os últimos cem metros são trilha na mata. Deck panorâmico com vista de trezentos e sessenta graus do vale, dois quartos, até cinco pessoas. **Não tem site nem perfil: vive só no Airbnb**</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o anúncio ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cfoto"><img src="img/c/3d371c61e6.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
+<div class="cn"><a href="https://korubo.com.br/safari-no-jalapao/" target="_blank" rel="noopener">Korubo Safari Camp</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Rio Novo · Mateiros · TO · só por expedição</div>
+<div class="cesp">Tendas de estilo africano sobre palafitas às margens do Rio Novo, a cento e vinte quilômetros de Ponte Alta por estrada de terra, com energia de bateria solar e banheiro coletivo em cabines. **Não se reserva diária: só se entra comprando expedição** de seis, sete ou dez dias, em grupos de até vinte e cinco pessoas. E é dela o acesso exclusivo ao **Fervedouro do Soninho**, que o índice já registrava como &quot;só por agência&quot; sem saber qual</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
+</div>
+<div class="c casa">
+<div class="cfoto"><img src="img/c/525128c5ba.webp" alt="" loading="lazy" decoding="async" width="560" height="224"></div>
+<div class="cn"><a href="https://www.casacanastra.com.br/" target="_blank" rel="noopener">CasaCanastra</a></div>
+<div class="cloc"><span class="t">casa pra ficar</span> · Serra da Canastra · São Roque de Minas · MG · três chalés</div>
+<div class="cesp">Três chalés — Casal, Família e Experiência —, os dois maiores com fogão a lenha e forno de pizza. Fica no distrito Serra da Canastra, em **São Roque de Minas**, que é a portaria principal do parque, e não em Vargem Bonita nem em Delfinópolis</div>
+<div class="who"><span class="lbl">salvo de</span> <b>@revistaunquiet</b> · <a class="plink" href="https://www.instagram.com/p/Ddht4NgG9lL/" target="_blank" rel="noopener">ver o post ↗</a></div>
 </div>
  </div>
 </section>
@@ -4160,14 +4289,39 @@ tabs.forEach(t=>t.addEventListener('click',()=>{
     document.getElementById('sec-'+s).hidden = (t.dataset.t!==s);
   });
 }));
-let regOn=null;
-const chips=document.querySelectorAll('.chip');
-chips.forEach(ch=>ch.addEventListener('click',()=>{
-  regOn = (regOn===ch.dataset.reg)?null:ch.dataset.reg;
-  chips.forEach(x=>x.classList.toggle('on',x.dataset.reg===regOn));
+
+/* dois filtros que se combinam: regiao e quando.
+   clicar no titulo do bloco ("Pra um feriado" / "Viagem grande") foca nele. */
+let regOn=null, gOn=null;
+const chipsR=document.querySelectorAll('.chip[data-reg]');
+const chipsG=document.querySelectorAll('.chip[data-g]');
+const heads=document.querySelectorAll('#sec-plan .esch');
+
+function aplica(){
+  chipsR.forEach(x=>x.classList.toggle('on', x.dataset.reg===regOn));
+  chipsG.forEach(x=>x.classList.toggle('on', x.dataset.g===gOn));
   document.querySelectorAll('#sec-plan .dest').forEach(d=>{
-    d.hidden = regOn!==null && d.dataset.reg!==regOn;
+    d.hidden = (regOn!==null && d.dataset.reg!==regOn)
+            || (gOn!==null  && d.dataset.g  !==gOn);
   });
+  heads.forEach(h=>{
+    const vis=[...document.querySelectorAll(
+      '#sec-plan .dest[data-g="'+h.dataset.g+'"]')].some(d=>!d.hidden);
+    h.hidden=!vis;
+    h.classList.toggle('on', gOn===h.dataset.g);
+  });
+}
+
+chipsR.forEach(ch=>ch.addEventListener('click',()=>{
+  regOn=(regOn===ch.dataset.reg)?null:ch.dataset.reg; aplica();
+}));
+chipsG.forEach(ch=>ch.addEventListener('click',()=>{
+  gOn=(gOn===ch.dataset.g)?null:ch.dataset.g; aplica();
+}));
+heads.forEach(h=>h.addEventListener('click',()=>{
+  gOn=(gOn===h.dataset.g)?null:h.dataset.g; aplica();
+  const t=document.getElementById('tabs');
+  if(t) window.scrollTo({top:t.offsetTop-12, behavior:'smooth'});
 }));
 </script>
 </body>
